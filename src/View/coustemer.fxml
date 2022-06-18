@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.coustemerControler">
+   <children>
+      <TextField fx:id="txtCoustemer" layoutX="197.0" layoutY="38.0" prefHeight="26.0" prefWidth="206.0" />
+      <Text layoutX="115.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coustemer:" wrappingWidth="75.270263671875" />
+      <Text layoutX="94.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of copys:" wrappingWidth="102.47027587890625" />
+      <TextField fx:id="txtcopy" layoutX="197.0" layoutY="83.0" prefHeight="26.0" prefWidth="206.0" />
+      <Text layoutX="94.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One side price:" wrappingWidth="102.47027587890625" />
+      <TextField fx:id="txtOneprice" layoutX="197.0" layoutY="129.0" prefHeight="26.0" prefWidth="206.0" />
+      <TextField fx:id="txtTotal" layoutX="197.0" layoutY="173.0" prefHeight="26.0" prefWidth="206.0" />
+      <Text layoutX="94.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total price:" wrappingWidth="102.47027587890625" />
+      <Button fx:id="btncal" layoutX="159.0" layoutY="219.0" mnemonicParsing="false" onAction="#btnCalOnAction" text="calculate" />
+      <Button fx:id="btnsave" layoutX="363.0" layoutY="219.0" mnemonicParsing="false" onAction="#btnSaveOnaction" text="Save" />
+      <Text fill="#180e0e" layoutX="221.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculation" wrappingWidth="122.13671875" />
+      <Button fx:id="btnCid" layoutX="482.0" layoutY="31.0" mnemonicParsing="false" onAction="#btncidOnAction" text="Cid" />
+      <Label fx:id="lblId" layoutX="478.0" layoutY="60.0" prefHeight="18.0" prefWidth="41.0" text="User ID" />
+   </children>
+</AnchorPane>

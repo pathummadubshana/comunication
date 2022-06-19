@@ -7,10 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import javax.xml.transform.Result;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class coustemerControler {
     public TextField txtCoustemer;
@@ -46,6 +43,23 @@ public class coustemerControler {
     }
 
     public void btnSaveOnaction(ActionEvent actionEvent) {
+        String id = lblId.getText();
+        String name = txtCoustemer.getText();
+        String total =txtTotal.getText();
+
+        Connection connection = dbConnection.getInstance().getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into custemer values(?,?,?)");
+            preparedStatement.setObject(1,id);
+            preparedStatement.setObject(2,name);
+            preparedStatement.setObject(3,total);
+
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 
     public void setDisable(boolean isDisable){
